@@ -2,13 +2,13 @@ package models;
 
 public class Vehicle {
     private String name;
-    private int model;
+    private String vehicleId;
     private Location location;
 
-    public Vehicle(String name, int model, Location location)
+    public Vehicle(String name, String vehicleId, Location location)
     {
         this.name = name;
-        this.model = model;
+        this.vehicleId = vehicleId;
         this.location = location;
     }
 
@@ -20,12 +20,12 @@ public class Vehicle {
         this.name = name;
     }
 
-    public int getModel() {
-        return model;
+    public String getvehicleId() {
+        return vehicleId;
     }
 
-    public void setModel(int model) {
-        this.model = model;
+    public void setvehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
     public Location getLocation() {

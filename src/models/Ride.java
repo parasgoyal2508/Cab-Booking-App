@@ -2,13 +2,13 @@ package models;
 
 public class Ride {
     private Driver driver;
-    private Rider rider;
+    private User user;
     private Location fromLocation;
     private Location toLocation;
 
-    public Ride(Driver driver, Rider rider, Location fromLocation, Location toLocation){
+    public Ride(Driver driver, User user, Location fromLocation, Location toLocation){
         this.driver = driver;
-        this.rider = rider;
+        this.user = user;
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
     }
@@ -21,12 +21,12 @@ public class Ride {
         this.driver = driver;
     }
 
-    public Rider getRider() {
-        return rider;
+    public User getUser() {
+        return user;
     }
 
-    public void setRider(Rider rider) {
-        this.rider = rider;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Location getFromLocation() {
