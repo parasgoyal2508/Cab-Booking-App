@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">CAB BOOKING APPLICATION</h1>
-  <p>It's a cab booking application built using Java. We can register 'n' number of users and drivers in our application using the "addUser()" and "addDriver()" functionality. Using this application we can book a ride from a particular pickup location to a particular drop location using the "findRide()" functionality. We can also check a particular user's ride history using the "rideHistory()" functionality. </p>
+  <p align="center">It's a cab booking application built using Java. We can register 'n' number of users and drivers in our application using the "addUser()" and "addDriver()" functionality. Using this application we can book a ride from a particular pickup location to a particular drop location using the "findRide()" functionality. We can also check a particular user's ride history using the "rideHistory()" functionality. </p>
   <img src="./image/Output.png">
   <p align="center">
     Implementation of Cab Booking Application using JAVA.
