@@ -1,5 +1,6 @@
 package driverCode;
 
+
 import enums.Gender;
 import exceptions.CreateException;
 import exceptions.NoRideDetailsException;
@@ -106,5 +107,24 @@ public class Main {
             System.out.println(e.getMessage());
             System.out.println();
         }
+
+        try {
+            cabBookingService.endRide(29,"Driver1", drop2);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println();
+        }
+
+        try {
+            cabBookingService.endRide(29,"Driver1", drop2);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println();
+        }
+
     }
 }

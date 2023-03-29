@@ -33,7 +33,7 @@ public class UserService {
     public Driver registerDriver(String name, int id, Gender gender, Vehicle v1, boolean available) throws CreateException {
         Driver driver = new Driver(name, id, gender, v1, available);
         if(driver == null || driverMap.containsKey(driver.getId())){
-            throw new CreateException("Oops!! Driver was not created.");
+            throw new CreateException("Oops!! Driver was not registered.");
         }
         driverMap.put(driver.getId(), driver);
         vehicleMap.put(driver.getVehicle().getvehicleId(), driver.getVehicle());
@@ -43,7 +43,7 @@ public class UserService {
     public User registerUser(String name, int id, Gender gender) throws CreateException{
         User user = new User(name, id, gender);
         if(user == null || userMap.containsKey(user.getId())){
-            throw new CreateException("Oops!! User was not created.");
+            throw new CreateException("Oops!! User was not registered.");
         }
         userMap.put(user.getId(), user);
         return user;

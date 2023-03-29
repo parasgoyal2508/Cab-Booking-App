@@ -5,7 +5,7 @@ import models.User;
 import models.Location;
 import models.Ride;
 import java.util.*;
-import exceptions.DriverNotAvailableException;
+import exceptions.*;
 
 public class RideService {
 
@@ -47,8 +47,35 @@ public class RideService {
                 System.out.println("Your ride is booked successfully!!");
                 System.out.println(driver.getName()+" is on it's way to pick you up.");
                 System.out.println();
-                Ride ride = new Ride(driver, user, fromLocation, toLocation);
+                Ride ride = new Ride(driver, user, fromLocation, toLocation,true);
                 user.getRideList().add(ride);
+            }
+        }
+    }
+
+
+    public void endRide(int userId, String driverName, Location toLocation) throws RideEndedAlreadyException{
+        User user = userService.userMap.get(userId);
+        List<Ride> rideList=user.getRideList();
+        for(Ride ride : rideList){
+            if(ride.getUser().getId()==userId && ride.getDriver().getName().equals(driverName)){
+                System.out.println("Ending "+user.getName()+"'s ride with "+driverName+":");
+                if(ride.istripOngoing()){
+                    Driver driver= userService.driverMap.get(ride.getDriver().getId());
+                    driver.setAvailable(true);
+                    ride.setTripOngoing(false);
+                    System.out.println(user.getName()+", Your ride with "+driverName+" has ended.");
+                    System.out.println();
+                    driver.getVehicle().getLocation().setX(toLocation.getX());
+                    driver.getVehicle().getLocation().setY(toLocation.getY());
+                }
+                else{
+                    throw new RideEndedAlreadyException("Oops, Ride is already ended!!");
+                }
+                
+            }
+            else{
+                throw new RideEndedAlreadyException("Oops, Ride details not found to end the ride!!");
             }
         }
     }

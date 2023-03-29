@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">CAB BOOKING APPLICATION</h1>
-  <p align="center">It's a cab booking application built using Java. We can register 'n' number of users and drivers in our application using the "addUser()" and "addDriver()" functionality. Using this application we can book a ride from a particular pickup location to a particular drop location using the "findRide()" functionality. We can also check a particular user's ride history using the "rideHistory()" functionality. To know more, Please check out the Driver code explaination section.</p>
+  <p align="center">It's a cab booking application built using Java. We can register 'n' number of users and drivers in our application using the "addUser()" and "addDriver()" functionality. Using this application we can book a ride from a particular pickup location to a particular drop location using the "findRide()" functionality. We can check a particular user's ride history using the "rideHistory()" functionality and we can also end a booked a previously booked ride and update the driver's location with the drop location usind "endRide()" functionality. To know more, Please check out the Driver code explaination section.</p>
   <img src="./image/Output.png">
   <p align="center">
     Implementation of Cab Booking Application using JAVA.
@@ -79,6 +79,15 @@ Here we are registering 3 drivers: d1, d2 and d3.
 
 1. Get the details of all the rides a particular user has taken.
 2. If the user has not taken any rides then it displays a message "User hasn't taken any ride yet!"
+
+**Ending Ride**
+
+![](./image/EndRide.png)
+
+1. We can end the previously booked ride.
+2. If ride has been already ended then it displays message "Oops, Ride is already ended!!".
+3. If ride details are not found then it displays message "Oops, Ride details not found to end the ride!!".
+4. Else,it ends the ride and updates the driver Location with ride's destination/drop location.
 
 **OUTPUT**
 

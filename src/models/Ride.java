@@ -5,12 +5,14 @@ public class Ride {
     private User user;
     private Location fromLocation;
     private Location toLocation;
+    private Boolean tripOngoing;
 
-    public Ride(Driver driver, User user, Location fromLocation, Location toLocation){
+    public Ride(Driver driver, User user, Location fromLocation, Location toLocation, Boolean tripOngoing){
         this.driver = driver;
         this.user = user;
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
+        this.tripOngoing=tripOngoing;
     }
 
     public Driver getDriver() {
@@ -43,5 +45,13 @@ public class Ride {
 
     public void setToLocation(Location toLocation) {
         this.toLocation = toLocation;
+    }
+
+    public boolean istripOngoing() {
+        return tripOngoing;
+    }
+
+    public void setTripOngoing(Boolean tripOngoing) {
+        this.tripOngoing = tripOngoing;
     }
 }

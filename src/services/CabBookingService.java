@@ -40,4 +40,8 @@ public class CabBookingService {
     public void rideHistory(String name) throws NoRideDetailsException{
         userService.rideHistory(name);
     }
+
+    public void endRide(int userId, String driverName, Location toLocation) throws RideEndedAlreadyException{
+        rideService.endRide(userId, driverName, toLocation);
+    }
 }
